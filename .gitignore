@@ -1,0 +1,10 @@
+﻿## Idea
+target/
+.idea/
+.idea
+*.iml
+
+/out/
+/JavaRushPlugin.properties
+/out.log
+/out.log.*
