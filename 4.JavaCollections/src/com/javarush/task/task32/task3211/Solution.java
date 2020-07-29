@@ -2,6 +2,8 @@ package com.javarush.task.task32.task3211;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 
 /* 
 Целостность информации
@@ -18,7 +20,10 @@ public class Solution {
     }
 
     public static boolean compareMD5(ByteArrayOutputStream byteArrayOutputStream, String md5) throws Exception {
+        MessageDigest messageDigest = MessageDigest.getInstance("MD5");
 
-        return false;
+        BigInteger bigInteger = new BigInteger(1, messageDigest.digest(byteArrayOutputStream.toByteArray()));
+
+        return String.format("%032x", bigInteger).equals(md5);
     }
 }
