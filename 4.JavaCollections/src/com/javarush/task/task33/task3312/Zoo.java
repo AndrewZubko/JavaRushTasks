@@ -1,3 +1,4 @@
+/*
 package com.javarush.task.task33.task3312;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -41,4 +42,4 @@ public class Zoo {
             super(name);
         }
     }
-}
+}*/
